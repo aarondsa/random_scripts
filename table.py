@@ -18,7 +18,7 @@ def solidbar (columns, col_width):
         p = p + 1
     print ""
 
-#broken bar function creates a single line of broken bars, with a | forming the columns
+#broken bar function creates a single line of broken bars, with a | forming the columns, i.e. |   |   |   |   |   | 
 def brokenbar (columns, col_width):
     sys.stdout.write('|')
     n = 0
