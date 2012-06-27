@@ -14,7 +14,18 @@ class stuff:
         #the command= argument says execute the function self.multiply when the button is clicked
         self.button = Button(self.frame, text='multiply', command=self.multiply)
         self.button.pack()
+
+        #a repeat of the above button. now there are two buttons in the frame
+        self.button = Button(self.frame, text='multiply', command=self.multiply)
+        self.button.pack()
         
+
+        #create a third button which does something in the frame, by calling function add_label
+        #if the called function has closed brackets after it i.e. (), the function is called only once
+        #and never again - i.e it is independent of button presses. i don't understand this...
+        self.button = Button(self.frame, text='add label', command = self.add_label)
+        self.button.pack()
+
         self.label = Label(self.frame, text='label')
         self.label.pack()
 
@@ -24,6 +35,10 @@ class stuff:
         b = 4
         result = a * b
         print result
+    
+    def add_label(self):
+        self.label = Label(self.frame, text='new label!!!')
+        self.label.pack()
 
 #call tk() by assigning it to a variable. You have to call tk() at the beginning. 
 root = Tk()
