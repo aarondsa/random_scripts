@@ -1,5 +1,5 @@
 #script to play with opening text files
-
+#still need to give the script a gui to make it fit in the gui folder...
 fileobject = open('words')
 print fileobject
 
@@ -26,7 +26,19 @@ def nth_word():
 
 def longest_word():
     print 'Welcome to the longest word function'
-    
+    wordlist = []
+    longlist = []
+    for word in fileobject:
+        wordlist.append(((len(word)), word))
+    wordlist.sort(reverse=True)
+    a, b = wordlist[0]
+    print 'The length of the longest word(s) is %s' % a
+    for (x, y) in wordlist:
+        if x == a:
+            longlist.append(y)
+    for x  in longlist:
+        print x
+
 #print menu of functions
 print 'Print all words  1\nPrint nth word  2\nPrint the longest word  3\n'
 
