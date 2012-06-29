@@ -17,7 +17,9 @@ def nth_word():
         wordlist.append(word)
 
     count = int(raw_input('Which word number would you like?'))
-    print 'your chosen word'
+    print 'Word number %d is' % count
+    #python counts from zero, so you need to subtract one from the number entered by the user
+    count = count - 1
     print wordlist[count]
 #    for debugging, this prints each consecutive item in wordlist
 #    print 'the entire word list'
@@ -26,16 +28,23 @@ def nth_word():
 
 def longest_word():
     print 'Welcome to the longest word function'
+    #two lists are required. the list of all the words, with a (length, word) tuple, and the list of the longest words 
     wordlist = []
     longlist = []
+    #for each item in the file, create a tuple of (length, word) and put in wordlist
     for word in fileobject:
         wordlist.append(((len(word)), word))
+    #sort wordlist, highest first
     wordlist.sort(reverse=True)
+    #find the length of the longest word (a) and the longest word (b)
     a, b = wordlist[0]
-    print 'The length of the longest word(s) is %s' % a
+    #remember that you need to subtract one from the length of each word
+    print 'The length of the longest word(s) is %s' % (a - 1)
+    #for each tuple in wordlist, if the length of the word equals the length of the longest word (a) add word to longlist
     for (x, y) in wordlist:
         if x == a:
             longlist.append(y)
+    #for every item in longlist, print
     for x  in longlist:
         print x
 
