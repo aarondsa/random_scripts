@@ -1,0 +1,25 @@
+<qbank>
+<item>
+<number>1</number>
+<question>What is the answer usually?</question>
+<answer>c</answer>
+<answer>s</answer>
+<answer>d</answer>
+<answer>f</answer>
+<answer>g</answer>
+<true>c</true>
+</item>
+
+<item>
+<number>2</number>
+<question>What is the book usually?</question>
+<answer>a1</answer>
+<answer>a2</answer>
+<answer>a3</answer>
+<answer>a4</answer>
+<answer>a5</answer>
+<answer>a6</answer>
+<true>a1</true>
+</item>
+
+</qbank>
